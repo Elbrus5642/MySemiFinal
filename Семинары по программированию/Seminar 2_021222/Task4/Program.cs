@@ -1,20 +1,30 @@
-﻿/* Напишите программу, 
-которая принимает на вход число и проверяет, кратно ли оно одновременно 
-7 и 23.
+﻿/*Напишите программу, которая принимает 
+на вход два числа и проверяет, 
+является ли одно число квадратом другого.
 
-14 -> нет 
-46 -> нет 
-161 -> да
+5, 25  ->  да
+-4, 16  ->  да
+25, 5  ->  да
+8,9  ->  нет
 */
-Console.WriteLine("Введите число: ");
-int  numberOne = int.Parse(Console.ReadLine() ??"");
-if (numberOne % 7 == 0  &&  numberOne % 23 == 0)
-{
-  Console.WriteLine($"Число {numberOne} делится на 7 и на 23");  
-}
-else
-{
-  Console.WriteLine($"Число {numberOne}  не делится на 7 и на 23");  
-}
 
+int GetNumberFromConsole(string message)
+   {
+      Console.WriteLine($"{message}");
+      string numberSrt =  Console.ReadLine() ??"";
+      int number = int.Parse(numberSrt);
+      return number;
+   }
 
+string IsItSquare( int numberOne, int numberTwo)
+{
+    if (numberOne == numberTwo*numberTwo)
+           return "Yes";     
+    else
+           return "No";
+ }
+
+int numberOne = GetNumberFromConsole("Введите первое число:");
+int numberTwo = GetNumberFromConsole("Введите второе число:");
+
+Console.WriteLine(IsItSquare(numberOne, numberTwo));

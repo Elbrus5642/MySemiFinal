@@ -1,27 +1,20 @@
 ﻿/* Напишите программу, 
-которая будет принимать на вход два числа и выводить, 
-является ли второе число кратным первому. 
-Если число 2 не кратно числу 1, 
-то программа выводит остаток от деления.
+которая принимает на вход число и проверяет, кратно ли оно одновременно 
+7 и 23.
 
-34, 5 -> не кратно, остаток 4 
-16, 4 -> кратно
+14 -> нет 
+46 -> нет 
+161 -> да
 */
-
-//string numbeStr = Console.ReadLine() ??"";
-Console.WriteLine("Введите первое число: ");
+Console.WriteLine("Введите число: ");
 int  numberOne = int.Parse(Console.ReadLine() ??"");
-Console.WriteLine("Введите второе число: ");
-int  numberTwo = int.Parse(Console.ReadLine() ??"");
-
-if (numberOne % numberTwo == 0)
+if (numberOne % 7 == 0  &&  numberOne % 23 == 0)
 {
-   Console.WriteLine($"Первое число {numberOne} кратно второму {numberTwo}"); 
-  
+  Console.WriteLine($"Число {numberOne} делится на 7 и на 23");  
 }
 else
 {
-    int ost = numberOne % numberTwo;
-   Console.WriteLine($"Первое число {numberOne}"+ 
-   $" не кратно второму {numberTwo} , остаток от деления {ost}");  
+  Console.WriteLine($"Число {numberOne}  не делится на 7 и на 23");  
 }
+
+
