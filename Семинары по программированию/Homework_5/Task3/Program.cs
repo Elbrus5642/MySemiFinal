@@ -68,7 +68,7 @@ void PrintRealNumberMassiv(double[] arr)
 }
 
 // Основная программа -  решение задачи
-int dimention_matrix = GetMatrixDimention($"Введите число, определяющее длину одномерного массива:");
+int dimention_matrix = GetMatrixDimention($"Введите     число, определяющее длину одномерного массива:");
 Console.WriteLine($"Задан одномерный вещественный (real) массив длинной {dimention_matrix}");
 double[] real_number_massiv = GetRealNumberMassiv(dimention_matrix);
 PrintRealNumberMassiv(real_number_massiv);
